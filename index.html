@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YID</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #FFFFFF;
+        --text: #000000;
+        --border: rgba(0,0,0,0.1);
+        --accent: #f8f8f8;
+      }
+      .dark {
+        --bg: #000000;
+        --text: #FFFFFF;
+        --border: rgba(255,255,255,0.1);
+        --accent: #0a0a0a;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: var(--bg);
+        color: var(--text);
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        transition: background-color 0.4s ease, color 0.4s ease;
+      }
+      * {
+        transition: border-color 0.4s ease;
+      }
+      /* Remove italics globally */
+      * { font-style: normal !important; }
+    </style>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              customBg: 'var(--bg)',
+              customText: 'var(--text)',
+              customBorder: 'var(--border)',
+              customAccent: 'var(--accent)',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "framer-motion": "https://esm.sh/framer-motion@^12.25.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
